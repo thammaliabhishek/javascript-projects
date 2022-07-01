@@ -10,10 +10,11 @@
 </head>
 <body>
     <div class="main-container">
-        <div class="clock"></div><br>
+        <div class="clock" ></div><br>
         <div class="clock-container">
             <label class="set"><img src="wake_up.svg" class="image">Set wake up time</label>
-            <select class="select">
+            <select class="select" id="wakeup">
+                <option value="">default</option>
                 <option>1:00 AM to 2:00 AM</option>
                 <option>2:00 AM to 3:00 AM</option>
                 <option>3:00 AM to 4:00 AM</option>
@@ -37,7 +38,8 @@
             </select>
             <div class="line"></div>
             <label class="lunch"><img src="lunch_time.svg" class="image">Set lunch time&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <select class="select">
+            <select class="select" id="lunchtime">
+                <option value="">default</option>
                 <option>1:00 AM to 2:00 AM</option>
                 <option>2:00 AM to 3:00 AM</option>
                 <option>3:00 AM to 4:00 AM</option>
@@ -61,7 +63,8 @@
             </select>
             <div class="line"></div>
             <label class="nap"><img src="nap_time.svg" class="image">Set nap time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <select class="select">
+            <select class="select" id="naptime">
+                <option value="">default</option>
                 <option>1:00 AM to 2:00 AM</option>
                 <option>2:00 AM to 3:00 AM</option>
                 <option>3:00 AM to 4:00 AM</option>
@@ -85,7 +88,8 @@
             </select>
             <div class="line"></div>
             <label class="night"><img src="lunch_time.svg" class="image">Set night time&nbsp;&nbsp;&nbsp;</label>
-            <select class="select">
+            <select class="select" id="nighttime">
+                <option value="">default</option>
                 <option>1:00 AM to 2:00 AM</option>
                 <option>2:00 AM to 3:00 AM</option>
                 <option>3:00 AM to 4:00 AM</option>
@@ -108,15 +112,15 @@
                 <option>11:00 PM to 12:00 AM</option>
             </select>
         </div>
-        <div class="third-container">
+        <div class="third-container" id="changeMsg">
             <h4>GOOD AFTERNOON !! TAKE SOME SLEEP</h4>
         </div>
-        <div class="fourth-container" hover="Party Time"> Set Alarm</div>
+        <div class="fourth-container" hover="Party Time"  onclick="set()"> Set Alarm</div>
         <div class="time-table">
-            <h6 class="font">Wake Up Time :10:00AM-11:00AM</h6>
-            <h6 class="font">Lunch Time :12PM-1PM</h6>
-            <h6 class="font">Nap Time :4PM-5PM</h6>
-            <h6 class="font">Night Time : 8PM-9AM</h6>
+            <p class="font">Wake Up Time :10:00AM-11:00AM</p>
+            <p class="font">Lunch Time :12PM-1PM</p>
+            <p class="font">Nap Time :4PM-5PM</p>
+            <p class="font">Night Time : 8PM-9AM</p>
 
         </div>
         <div class="timer-box">
@@ -124,34 +128,34 @@
             <div class="timer-box2"></div>
             <div class="timer-box1">
                 <div class="time">Time</div>
-                <div class="bg">
-                    <span>12</span><br>
+                <div class="bg" >
+                    <span id="hrs">00</span><br>
                     <span>hours</span>
                 </div>
                 <span class="semicolon">:</span>
                 <div class="bg">
-                    <span>00</span><br>
+                    <span id="min">00</span><br>
                     <span>mins</span>
                 </div>
                 <span class="semicolon">:</span>
                 <div class="bg">
-                    <span>01</span><br>
+                    <span id="sec">00</span><br>
                     <span>secs</span>
                 </div>
                 <div class="pm">
-                    <span>PM</span>
+                    <span id="am">PM</span>
                 </div>
             </div>
         </div>  
-        <div class="message">
+        <div class="message" id="changeText">
                 <h3>GRAB SOME HEALTHY BREAKFAST!!!</h3>
         </div> 
-        <div class="breakfast">
+        <div class="breakfast" id="changeImage">
             <img src="./breakfast.svg">
         </div> 
 
     </div>
-    
+    <script src="./clock.js"></script>
 </body>
 </html>
 

@@ -80,16 +80,16 @@ body{
     
 }
 .time-table{
-    width:16vw;
+    width:22vw;
     background-color:#631983;
     color:#FC5EFF;
     position:absolute;
-    top:85vh;
-    left:34vw;
+    top:84vh;
+    left:30vw;
     border-radius:10px;
 }
 .font{
-    margin:5px;
+    margin:9px;
 }
 .timer-box{
     display:flex;
